@@ -1,3 +1,4 @@
+
 import type { Config } from "tailwindcss";
 
 export default {
@@ -18,6 +19,9 @@ export default {
 			}
 		},
 		extend: {
+			fontFamily: {
+				'display': ['Inter', 'ui-sans-serif', 'system-ui'],
+			},
 			colors: {
 				border: 'hsl(var(--border))',
 				input: 'hsl(var(--input))',
@@ -25,24 +29,24 @@ export default {
 				background: 'hsl(var(--background))',
 				foreground: 'hsl(var(--foreground))',
 				primary: {
-					DEFAULT: 'hsl(var(--primary))',
-					foreground: 'hsl(var(--primary-foreground))'
+					DEFAULT: '#8B5CF6',
+					foreground: '#fff'
 				},
 				secondary: {
-					DEFAULT: 'hsl(var(--secondary))',
-					foreground: 'hsl(var(--secondary-foreground))'
+					DEFAULT: '#E5DEFF',
+					foreground: '#403E43'
 				},
 				destructive: {
 					DEFAULT: 'hsl(var(--destructive))',
 					foreground: 'hsl(var(--destructive-foreground))'
 				},
 				muted: {
-					DEFAULT: 'hsl(var(--muted))',
-					foreground: 'hsl(var(--muted-foreground))'
+					DEFAULT: '#F6F6F7',
+					foreground: '#403E43'
 				},
 				accent: {
-					DEFAULT: 'hsl(var(--accent))',
-					foreground: 'hsl(var(--accent-foreground))'
+					DEFAULT: '#7E69AB',
+					foreground: '#fff'
 				},
 				popover: {
 					DEFAULT: 'hsl(var(--popover))',
@@ -84,11 +88,19 @@ export default {
 					to: {
 						height: '0'
 					}
-				}
+				},
+				'card-hover': {
+					'0%': { transform: "scale(1)", boxShadow: "0 0 0 0 rgba(139,92,246,0.1)" },
+					'100%': { transform: "scale(1.03)", boxShadow: "0 8px 32px 0 rgba(139,92,246,0.13)" },
+				},
+				'fade-in': {
+					'0%': { opacity: "0", transform: "translateY(10px)" },
+					'100%': { opacity: "1", transform: "translateY(0)" }
+				},
 			},
 			animation: {
-				'accordion-down': 'accordion-down 0.2s ease-out',
-				'accordion-up': 'accordion-up 0.2s ease-out'
+				'card-hover': 'card-hover 0.25s linear forwards',
+				'fade-in': 'fade-in 0.6s ease-out forwards',
 			}
 		}
 	},
