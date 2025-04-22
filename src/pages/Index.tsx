@@ -59,7 +59,7 @@ const Index = () => {
 
       {/* Footer */}
       <footer className="border-t mt-14 py-6 text-sm bg-white/95 text-gray-500 text-center">
-        &copy; {new Date().getFullYear()} Alex Morgan &mdash; UX Portfolio
+        &copy; {new Date().getFullYear()} David
       </footer>
     </div>
   );
